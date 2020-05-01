@@ -1,12 +1,10 @@
 # php-tax-invoice
 PHP Library to Compute GST Tax and Print PDF Invoice
 
-Overview
-===============
+## Overview
 This codebase helps in computing tax and creating invoice PDF
 
-PHP Setup
-===============
+## PHP Setup
 In the **php.ini**, to enable the "mbstring" PHP extension
 ```
 extension_dir = "ext"
@@ -19,15 +17,14 @@ You must copy and unzip this library under the "dompdf" folder. See the Download
 NOTE: This is under LGPL License. This code is only to be used for demonstration purposes
 https://github.com/dompdf/dompdf/blob/master/LICENSE.LGPL
 
-Key Files
-===============
+## Key Files
 - **order.php:** Class representing an Order
 - **orderitem.php:** Class representing an OrderItem (order line item) It also stores computed tax values
 - **gst.php:** Provides method to comput GST and store in respective OrderItem. The method to invoke is computeGST()
 - **invoice-pdf.php:** Provides method to print invoice PDF. The method to invoke is createInvoicePdf();
 
-Key Pointers on GST Computation (gst.php)
-============================================
+## Key Pointers on GST Computation (gst.php)
+
 For logic of tax computation, please read
 https://www.axisbank.com/progress-with-us/money-matters/what-is-cgst-sgst-utgst-igst
 
@@ -51,8 +48,7 @@ $hsnRateMap["hsn4"] = 18;
 ```
 If no matching HSN is found, then the default rate of 18% is used.
 
-Testing
-============================================
+## Testing
 Test cases are provided in the following files:
 
 - **test-gst.php:** Prints the computed tax values on the console.
