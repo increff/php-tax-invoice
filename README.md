@@ -1,7 +1,7 @@
 # php-tax-invoice
 PHP Library to Compute GST Tax and Print PDF Invoice
 
-OVERVIEW
+Overview
 ===============
 This codebase helps in computing tax and creating invoice PDF
 
@@ -17,7 +17,7 @@ You must copy and unzip this library under the "dompdf" folder. See the Download
 NOTE: This is under LGPL License. This code is only to be used for demonstration purposes
 https://github.com/dompdf/dompdf/blob/master/LICENSE.LGPL
 
-KEY FILES
+Key Files
 ===============
 order.php: Class representing an Order
 orderitem.php: Class representing an OrderItem (order line item) It also stores computed tax values
@@ -34,7 +34,7 @@ The code assumes that "toState" and "fromState" are provided as uppercase state 
 Following states are assumed to be Union Territories
 "AN", "DN", "CH", "LD", "DD"
 
-Please see
+For all state codes, please se
 https://kb.bullseyelocations.com/support/solutions/articles/5000695302-india-state-codes
 
 Following GST rates are hard-coded as an example. You MUST modify to code to load tax rates against HSN code from a DB.
@@ -46,7 +46,7 @@ $hsnRateMap["hsn4"] = 18;
 
 If no matching HSN is found, then the default rate of 18% is used.
 
-TESTING
+Testing
 ============================================
 Test cases are provided in 
 test-gst.php: Prints the computed tax values on the console.
