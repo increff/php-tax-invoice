@@ -1,8 +1,8 @@
 # php-tax-invoice
-PHP Library to Compute GST Tax and Print PDF Invoice
+PHP Library to Compute GST Tax and Print PDF Invoice. 
 
-## Overview
-This codebase helps in computing tax and creating invoice PDF
+Test using **PHP version 7.2.30**.
+
 
 ## PHP Setup
 In the **php.ini**, to enable the "mbstring" PHP extension
