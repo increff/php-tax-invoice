@@ -1,0 +1,96 @@
+<html>
+
+<head>
+	<style>
+		table.outer {
+			width: 100%; 
+			border:1px solid;
+		}
+		td, th {
+			border-bottom: 1px solid;
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body>
+
+	<h3>TAX INVOICE - ICONIC</h3>
+
+	<table class="outer">
+		<tr>
+			<th>Invoice</th>
+			<th>Order</th>
+			<th>From</th>
+			<th>To</th>
+		</tr>
+		<tr>
+			<td>
+				Invoice No.: {invoiceNo} <br>
+				Time: {invoiceTime} <br>
+				Amount: {invoiceAmount} <br>
+				Currency: INR <br>
+			</td>
+			<td>
+				Order No.: {orderNo} <br>
+				Time: {orderTime} <br>
+			</td>
+			<td>
+				Name: {fromName} <br>
+				State: {fromState}<br>
+				Address: <br>
+				{fromAddress} <br>
+			</td>
+			<td>
+				Name: {toName} <br>
+				State: {toState}<br>
+				Address: <br>
+				{toAddress} <br>
+			</td>
+		</tr>
+	</table>
+
+	<h3>Invoice Items</h3>
+
+	<table class="outer">
+			<tr>
+				<th>#</th>
+				<th>SKU</th>
+				<th>Description</th>
+				<th>Quantity</th>
+				<th>MRP</th>
+				<th>Base Amt.</th>
+				<th>Tax Amt.</th>
+				<th>Total Amt.</th>
+			</tr>
+			{itemHtml}
+	</table>
+
+	<h3>Tax Breakup Details</h3>
+
+	<table class="outer">
+			<tr>
+				<th>#</th>
+				<th>SKU</th>
+				<th>HSN</th>
+				<th>Tax Rate (%)</th>
+				<th>Tax Breakup (%)</th>
+			</tr>
+			{taxHtml}
+	</table>
+
+	<h3>Remarks</h3>
+
+	<table class="outer">
+			<tr>
+				<td>
+					&nbsp; <br>
+					&nbsp; <br>
+					&nbsp; <br>
+				</td>
+			</tr>
+	</table>	
+
+</body>
+
+</html>
